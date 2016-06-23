@@ -29,7 +29,7 @@ int main(int argc, _TCHAR* argv[])
 	//OutputDebugString(ngon.toString());
 	
 	XML xmfile("C:\\Users\\Jacob\\Desktop\\test.xml");
-	xmfile.open("C:\\Users\\Jacob\\Desktop\\test.xml");
+	//xmfile.open("C:\\Users\\Jacob\\Desktop\\test1.xml");
 	system("PAUSE");
 	return EXIT_SUCCESS;
 }

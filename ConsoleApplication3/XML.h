@@ -44,10 +44,10 @@ public:
 	int getXMLStandalone();
 
 protected:
-	bool _parseHeader(std::string sHeader);
-	int _parseVersion(std::string sHeader);
-	int _parseEncoding(std::string sHeader);
-	int _parseStandalone(std::string sHeader);
+	bool _parseHeader(std::string &sHeader);
+	int _parseVersion(std::string &sHeader);
+	int _parseEncoding(std::string &sHeader);
+	int _parseStandalone(std::string &sHeader);
 
 private:
 	bool _isParsed;
@@ -66,9 +66,11 @@ private:
 class XMLNode {
 public:
 	XMLNode();
-	XMLNode(XMLNode* parent);
+	XMLNode(std::string data, unsigned int level);
 	~XMLNode();
 
-private:
+	bool parse();
 
+private:
+	XMLNode* child;
 };
